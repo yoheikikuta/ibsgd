@@ -96,7 +96,7 @@ def data_shuffle(data_sets_org, percent_of_train, min_test_data=80, shuffle_data
     data_sets = C()
     stop_train_index = perc(percent_of_train[0], data_sets_org.data.shape[0])
     start_test_index = stop_train_index
-    if percent_of_train > min_test_data:
+    if percent_of_train[0] > min_test_data:
         start_test_index = perc(min_test_data, data_sets_org.data.shape[0])
     data_sets.train = C()
     data_sets.test = C()
