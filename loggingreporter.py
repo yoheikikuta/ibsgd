@@ -129,7 +129,7 @@ class LoggingReporter(keras.callbacks.Callback):
                 data['activity_tst'].append(self.layerfuncs[lndx]([self.tst.X,])[0])
             
         fname = self.cfg['SAVE_DIR'] + "/epoch%08d"% epoch
-        print("Saving", fname)
+        #print("Saving", fname)
         with open(fname, 'wb') as f:
              #cPickle.dump({'ACTIVATION':self.cfg['ACTIVATION'], 'epoch':epoch, 'data':data, 'loss':loss}, f, cPickle.HIGHEST_PROTOCOL)        
              cPickle.dump({'ACTIVATION':self.cfg['ACTIVATION'], 'epoch':epoch, 'data':data, 'loss':loss}, f, -1)        
